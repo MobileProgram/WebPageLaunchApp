@@ -31,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Intent exception occured", Toast.LENGTH_SHORT).show();
             }
 
-            WebView webview = binding.webview;
+            WebView webview = (WebView) binding.webview;
             webview.setWebViewClient(new WebViewClient());
+            assert webPageUrl != null;
             webview.loadUrl(webPageUrl.toString());
         }
     }
